@@ -1,0 +1,9 @@
+.text-encriptado {
+  display: none;
+  /* Ocultar el área de texto encriptado inicialmente */
+}
+
+.desencriptado img {
+  display: block;
+  /* Asegurar que la imagen del muñeco esté visible inicialmente */
+}
