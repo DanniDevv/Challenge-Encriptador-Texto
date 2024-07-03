@@ -2,13 +2,6 @@
 
 Este proyecto consiste en una aplicación web que permite encriptar y desencriptar texto siguiendo un conjunto específico de reglas de sustitución de caracteres. Es una herramienta útil para ocultar mensajes o aprender sobre técnicas básicas de cifrado.
 
-## Características
-
-- **Encriptación de Texto:** Permite al usuario ingresar texto en minúsculas y sin acentos para luego encriptarlo siguiendo reglas predefinidas.
-- **Desencriptación de Texto:** Permite al usuario ingresar texto encriptado siguiendo las mismas reglas para obtener el texto original.
-- **Interfaz Sencilla:** Cuenta con una interfaz amigable y fácil de usar, dividida en secciones para encriptar, desencriptar y mostrar el resultado.
-- **Copiado al Portapapeles:** Ofrece la opción de copiar el texto encriptado/desencriptado al portapapeles para su uso en otro lugar.
-
 ## Reglas de Encriptación
 
 Las reglas de encriptación/desencriptación son las siguientes:
@@ -36,5 +29,35 @@ function encriptar() {
     .replace(/u/g, 'ufat')
 
   mostrarTextoEncriptado(textoEncriptado)
+}
+```
+
+### Desencriptar
+
+La función desencriptar realiza el proceso inverso, convirtiendo el texto encriptado de vuelta a su forma original.
+
+```javascript
+function desencriptar() {
+  const texto = document.getElementById('encriptado').value
+  const textoDesencriptado = texto
+    .replace(/enter/g, 'e')
+    .replace(/imes/g, 'i')
+    .replace(/ai/g, 'a')
+    .replace(/ober/g, 'o')
+    .replace(/ufat/g, 'u')
+
+  mostrarTextoEncriptado(textoDesencriptado)
+}
+```
+
+### Copiar al Portapapeles
+
+La función copiar permite copiar el texto encriptado/desencriptado al portapapeles.
+
+```javascript
+function copiar() {
+  const textoEncriptado = document.getElementById('text-encriptado')
+  textoEncriptado.select()
+  document.execCommand('copy')
 }
 ```
