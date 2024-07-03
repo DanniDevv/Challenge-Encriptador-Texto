@@ -10,6 +10,7 @@ function encriptar() {
   mostrarTextoEncriptado(textoEncriptado);
 
   document.querySelector(".desencriptado img").style.display = "none";
+  document.querySelector(".mensaje-encriptado ").style.display = "none";
 }
 
 function desencriptar() {
